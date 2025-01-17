@@ -1,0 +1,55 @@
+<%- include('./inc-header.ejs') %>
+
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Hi Admin,</b>
+                </p>
+
+                <p>Here is the weekly user analytics.</p>
+
+                <P>
+                    <b>Total Sign-ups this week: <b><%= data.count %></b>
+                </b>
+                </P>
+
+                <% if(data.count > 0){ %>
+
+                <table style=" border-collapse: collapse;width: 100%;">
+
+                    <tr>
+                        <th style="border: 1px solid #505050;padding: 10px;text-align: left;">First name </th>
+                        <th style="border: 1px solid #505050;padding: 10px;text-align: left;">Last name </th>
+                        <th style="border: 1px solid #505050;padding: 10px;text-align: left;">Email </th>
+                        <th style="border: 1px solid #505050;padding: 10px;text-align: left;">Phone No. </th>
+                        <th style="border: 1px solid #505050;padding: 10px;text-align: left;">Status </th>    
+                        <th style="border: 1px solid #505050;padding: 10px;text-align: left;">Joined On </th>               
+                    </tr>
+
+                    <% for (const user of data.users) { %>
+                        <tr>
+                            <td style="border: 1px solid #505050;padding: 8px;text-align: left;"><%= user.first_name %></td>
+                            <td style="border: 1px solid #505050;padding: 8px;text-align: left;"><%= user.last_name %></td>
+                            <td style="border: 1px solid #505050;padding: 8px;text-align: left;"><%= user.email %></td>
+                            <td style="border: 1px solid #505050;padding: 8px;text-align: left;"><%= user.phone %></td>
+                            <td style="border: 1px solid #505050;padding: 8px;text-align: left;"><%= user.status %></td>
+                            <td style="border: 1px solid #505050;padding: 8px;text-align: left;">
+                                <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date(user.created_at)) %>
+                            </td>
+                        </tr>
+                    <% } %>   
+                </table>  
+                
+                <% } %>
+
+            </td>
+        </tr>
+    </table>
+
+
+    <%- include('./inc-footer.ejs') %>
+

@@ -1,0 +1,32 @@
+<%- include('./inc-header.ejs') %>
+
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Hello <%= admin.first_name %>,</b>
+                </p>
+
+                <p>
+                    <b>
+                        <%= user.first_name %>
+                            <%= user.last_name %>
+                    </b> has requested to join the <b>
+                        <%= organisation.name %>
+                    </b> organisation
+                </p>
+
+                <p class="mt-1">
+                    Thank You, <br />
+                    Team ABCD
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+
+    <%- include('./inc-footer.ejs') %>

@@ -1,0 +1,25 @@
+<%- include('./inc-header.ejs') %>
+
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    You've initiated a password reset process, Please use the following verification code to
+                    continue with the process <b>
+                        <%= otp %>
+                    </b>
+                <p>
+
+                <p class="mt-1">
+                    <a href="#" class="btn"> Login To Your Account </a>
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+
+    <%- include('./inc-footer.ejs') %>

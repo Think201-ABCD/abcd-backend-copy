@@ -1,0 +1,7 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "../../deploy/build/analyze-service"
+    },
+    "exclude": ["node_modules", "build", "ecosystem.config.js"]
+}

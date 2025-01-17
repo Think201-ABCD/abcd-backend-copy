@@ -1,0 +1,20 @@
+{
+    "name": "@abcd/user-service",
+    "version": "1.0.0",
+    "description": "user Service",
+    "main": "src/app.ts",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "start": "node ../../deploy/build/user-service/Apps/user-service/app.js",
+        "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "csvtojson": "^2.0.10"
+    }
+}

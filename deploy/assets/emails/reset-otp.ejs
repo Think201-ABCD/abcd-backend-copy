@@ -1,0 +1,21 @@
+<%- include('./inc-header.ejs') %>
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Hello <%= user_name%>,</b>
+                </p>
+
+                <p>
+                    You've initiated a password reset process
+                <p>
+
+                <p>Your reset password OTP is: <b><%= otp%></b></p>
+                
+            </td>
+        </tr>
+    </table>
+
+    <%- include('./inc-footer.ejs') %>

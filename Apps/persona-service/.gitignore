@@ -1,0 +1,7 @@
+node_modules
+build
+ecosystem.config.js
+.env
+package-lock.json
+temp
+index.html

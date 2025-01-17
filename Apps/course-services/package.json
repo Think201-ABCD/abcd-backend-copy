@@ -1,0 +1,17 @@
+{
+    "name": "@abcd/course-service",
+    "version": "1.0.0",
+    "description": "Course Service",
+    "main": "src/app.ts",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "start": "node ../../deploy/build/course-service/Apps/course-service/src/app.js",
+        "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC"
+}

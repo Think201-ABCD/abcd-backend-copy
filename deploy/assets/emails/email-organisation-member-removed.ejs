@@ -1,0 +1,26 @@
+<%- include('./inc-header.ejs') %>
+
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Dear <%= user.first_name %>,</b>
+                </p>
+
+                <p>
+                    You have been removed from the <b>
+                        <%= organisation.name %>
+                    </b> organisation
+                </p>
+
+
+            </td>
+        </tr>
+    </table>
+
+
+    <%- include('./inc-footer.ejs') %>
+

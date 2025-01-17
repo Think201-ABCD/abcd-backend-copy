@@ -1,0 +1,54 @@
+<%- include('./inc-header.ejs') %>
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Dear <%= user.first_name %>,</b>
+                </p>
+
+                <p>
+                    <b>
+                        <%= admin.first_name %>
+                            <%= admin.last_name %>
+                    </b> has invited you to join the <b>
+                        <%= organisation.name %>
+                    </b> organisation on 
+                    <p>The Atlas of Behavior Change in Development</p>
+                </p>
+
+                <p>
+                    Please use the following credentitals to log in into the platform -
+                </p>
+
+                <p class="mt-1">
+                    <b>Email: <%= user.email %> <br />Password: <%= password %></b>
+                </p>
+
+                <p >
+                    You’re all set. Now you can use our tools to run high-quality
+                    behavioral interventions in your programs, explore research
+                    and knowledge, and connect with organizations in the behavior
+                    change for the development community
+                </p>
+
+
+
+                <p class="mt-1">
+
+                    <a href="<%= process.env.FRONT_DOMAIN  %>" class="btn" >
+                        Login now
+                    </a>
+                </p>
+
+                <p class="mt-1">
+                    Thank You, <br />
+                    Team ABCD
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+    <%- include('./inc-footer.ejs') %>

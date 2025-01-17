@@ -1,0 +1,17 @@
+{
+    "name": "@abcd/operation-service",
+    "version": "1.0.0",
+    "description": "Operations Service",
+    "main": "src/app.ts",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "start": "node ../../deploy/build/operation-service/Apps/operation-service/src/app.js",
+        "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC"
+}

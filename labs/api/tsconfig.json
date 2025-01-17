@@ -1,0 +1,7 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "../../deploy/build/labs/api" /* Redirect output structure to the directory. */
+    },
+    "exclude": ["node_modules", "build"]
+}

@@ -1,0 +1,27 @@
+<%- include('./inc-header.ejs') %>
+
+<table class="content">
+    <tr>
+        <td align="left">
+            <p>
+                <b>Dear <%= data.name %>,</b>
+            </p>
+
+            <p>
+                Your have been assigned <b><%= data.role%></b> role for <b> <%=data.workspace_name%> </b> workspace.
+            </p>
+
+            <p>Begin contributing to the workspace by clicking here:</p>
+
+            <p class="mt-1">
+                <a
+                    href="<%= process.env.FRONT_DOMAIN  %>/workspaces/<%= data.workspace_uuid %>"
+                    class="btn">
+                    Visit Workspace
+                </a>
+            </p>
+        </td>
+    </tr>
+</table>
+
+<%- include('./inc-footer.ejs') %>

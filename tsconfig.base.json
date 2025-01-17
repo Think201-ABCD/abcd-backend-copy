@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "rootDir": ".",
+        "baseUrl": ".",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "target": "es2018",
+        "sourceMap": true,
+        "allowJs": true,
+        "paths": {
+            "@redlof/app/*": ["Apps/*"],
+            "@redlof/libs/*": ["libs/*"]
+        },
+        "strict": false,
+        "incremental": true,
+        "noEmit": false,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true
+    },
+    "exclude": ["node_modules", "build"]
+}

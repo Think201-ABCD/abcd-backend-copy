@@ -1,0 +1,27 @@
+<%- include('./inc-header.ejs') %>
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p><b>Hi <%= user.first_name%>,</b></p>
+
+                <p>You have been invited to contribute to the Corpus of ABCD knowledge library.</p>
+                <p>Please download the ABCD Contributor Chrome Extension on to your Chrome browser and start contributing to ABCD's Knowledge Library</p>
+                
+                <p class="mt-1">
+                    <a href="<%= process.env.PLUGIN_LINK %>" class="btn">
+                        Download the chrome pulgin here
+                    </a>
+                </p>
+                
+                <p class="mt-1">
+                    Thank you,<br />
+                    Team ABCD
+                </p>
+            </td>
+        </tr>
+    </table>
+
+<%- include('./inc-footer.ejs') %>

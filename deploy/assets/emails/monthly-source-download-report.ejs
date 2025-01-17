@@ -1,0 +1,90 @@
+<%- include('./inc-header.ejs') %>
+
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Hi <%= data.org_admin %>,</b>
+                </p>
+
+                <p>Here is a list of the source downloads from your knowledge and collateral library in the last month:</p>
+
+                <P>
+                    <b>Organisation: <%= data.org_name %></b>
+                </P>
+                <br/>
+                <h2>Knowledge downloads</h2>
+
+                <% if(data.knowledgeData.length === 0){ %>
+                    <p>Total downloads: 0</p>
+                <% }else { %>
+                    <% for (let knowledge of data.knowledgeData) { %>
+                        <% for (let key in knowledge) { %>
+    
+                            <% if(key === "knowledge_title") { %>
+                                <h4><u><%= knowledge.knowledge_title %></u></h4>
+                                <% continue %>
+                            <% } %>
+    
+                            <% if(key === "total_downloads") { %>
+                                <p>Total downloads: <%= knowledge.total_downloads %></p>
+                                <% continue %>
+                            <% } %>
+    
+                            <% if(key === "no_org_user") { %>
+                                <p>Non organisational users: <%= knowledge.no_org_user %></p>
+                                <% continue %>
+                            <% } %>
+    
+                            <p><%= key %>: <%= knowledge[key] %></p>
+                        <% } %>
+                    <% } %>
+                <% } %>
+
+                <br />
+
+                <h2>Collateral downloads</h2>
+
+                <% if(data.collateralData.length === 0){ %>
+                    <p>Total downloads: 0</p>
+                <% }else { %>
+                    <% for (let collateral of data.collateralData) { %>
+                        <% for (let key in collateral) { %>
+    
+                            <% if(key === "collateral_title") { %>
+                                <h4><u><%= collateral.collateral_title %></u></h4>
+                                <% continue %>
+                            <% } %>
+    
+                            <% if(key === "total_downloads") { %>
+                                <p>Total downloads: <%= collateral.total_downloads %></p>
+                                <% continue %>
+                            <% } %>
+    
+                            <% if(key === "no_org_user") { %>
+                                <p>Non organisational users: <%= collateral.no_org_user %></p>
+                                <% continue %>
+                            <% } %>
+                            
+                            <p><%= key %>: <%= collateral[key] %></p>
+                        <% } %>
+                    <% } %>
+
+                <% } %>
+
+
+               
+
+
+                   
+
+            </td>
+        </tr>
+    </table>
+
+
+    <%- include('./inc-footer.ejs') %>
+

@@ -1,0 +1,17 @@
+{
+    "name": "@abcd/persona-service",
+    "version": "1.0.0",
+    "description": "Persona Service",
+    "main": "src/app.ts",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "start": "node ../../deploy/build/persona-service/Apps/persona-service/src/app.js",
+        "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC"
+}

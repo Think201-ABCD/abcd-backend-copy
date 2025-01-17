@@ -1,0 +1,39 @@
+<%- include('./inc-header.ejs') %>
+
+    <!-- Main -->
+
+    <table class="content">
+        <tr>
+            <td align="left">
+
+                <p>
+                    <b>Dear <%= user.first_name%>,</b>
+                </p>
+
+                <p>
+                    Thank you for choosing to use ABCD!
+                </p>
+
+                <p>
+                    Your OTP is: <b>
+                        <%= otp %>
+                    </b>
+                <p>
+
+                <p>Enter this code in the designated field on the verification page to complete the
+                    process. Please note
+                    that this OTP is
+                    valid for a limited time only and should be used immediately. If you do not complete the
+                    verification process within the
+                    allotted time, you may need to request a new OTP.</p>
+
+                <p class="mt-1">
+                    Thank You, <br />
+                    Team ABCD
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+    <%- include('./inc-footer.ejs') %>

@@ -1,0 +1,29 @@
+<%- include('./inc-header.ejs') %>
+    <table align="center">
+        <tbody>
+            <tr>
+                <td class="text-center">
+                    <div class="mail-body" style="margin: 0 25px 0 25px;">
+                        <p class="font-large">
+                            <b>Hello <%= user_name%>,</b>
+                        </p>
+
+                        <p>Thanks for evaluating your document through the ABCD Evaluator.</p>
+                        <p>Please find the evaluation output below. Please note that this has been generated through AI
+                            and
+                            LLM tools and might
+                            contain factual inaccuracies. We urge you to double check facts before using this in your
+                            work.
+                        </p>
+                        <p>We would love to hear from you to get feedback and explore how we can support you more.
+                            Please
+                            write to us at
+                            <a href="mailto:contact@abcd.guide">contact@abcd.guide</a> with your thoughts.
+                        </p>
+                        <p><b>ABCD</b></p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <%- include('./inc-footer.ejs') %>

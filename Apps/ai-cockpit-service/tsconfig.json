@@ -1,0 +1,7 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "../../deploy/build/ai-cockpit-service/api"
+    },
+    "exclude": ["node_modules", "build", "ecosystem.config.js"]
+}

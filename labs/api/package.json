@@ -1,0 +1,13 @@
+{
+    "name": "@abcd/api-labs",
+    "version": "0.0.0",
+    "description": "",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register app.ts",
+        "test": "pm2 start app.ts --watch --node-args='-r tsconfig-paths/register'",
+        "inspect": "nodemon --inspect app.ts",
+        "lint": "eslint . --ext  .ts --quiet",
+        "lint-fix": "eslint . --ext  .ts --quiet --fix"
+    }
+}

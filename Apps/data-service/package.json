@@ -1,0 +1,17 @@
+{
+    "name": "@abcd/data-service",
+    "version": "1.0.0",
+    "description": "data Service",
+    "main": "src/app.ts",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "start": "node ../../deploy/build/data-service/Apps/data-service/src/app.js",
+        "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "@belonggai/ai-cockpit-api",
+    "version": "1.0.0",
+    "description": "AI-cockpit Api Service",
+    "main": "src/app.ts",
+    "scripts": {
+        "build": "tsc && resolve-tspaths",
+        "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register app.ts",
+        "ball": "nx run-many --target=build --skip-nx-cache"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+    }
+}

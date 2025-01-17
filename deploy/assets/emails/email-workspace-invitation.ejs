@@ -1,0 +1,58 @@
+<%- include('./inc-header.ejs') %>
+
+<table class="content">
+    <tr>
+        <td align="left" >
+            <p >
+                <b
+                    ><% if (user) { %>
+                    <p>Hi <%= user.first_name %>,</p>
+                    <% } else if (!data.name) { %>
+                    <p>Hi,</p>
+                    <% } else { %>
+                    <p>Hi <%= data.name %>,</p>
+                    <% } %></b
+                >
+            </p>
+
+            <p>
+                <%if(user){%>
+                <b> <%=data.invited_name%> </b> has invited you to join a workspace: <%= workspace.name%> <%}%>
+                <%if(!user){%> 
+                    <p><b> <%=data.invited_name%> </b> has invited you to join a workspace on</p> 
+                    <p>The Atlas of
+                Behavior Change in Development: <b> <%= workspace.name%></b> </p><%}%> 
+            </p>
+
+            <p><%if(user){%></p>
+
+            <p >Begin contributing to the team by clicking here:</p>
+            <%}%> <%if(!user){%>
+            <p>Join ABCD now and Begin contributing to the team here:</p>
+            <%}%>
+
+            <p></p>
+
+            <p class="mt-1">
+                <% if(data.uuid) { %>
+
+                <a href="<%= process.env.FRONT_DOMAIN  %>/onboarding/invite/<%= data.uuid %>" class="btn"> Join Now </a>
+                <% } %> <% if(!data.uuid) { %>
+
+                <a href="<%= process.env.FRONT_DOMAIN  %>" class="btn">
+                    Login Now 
+                </a>
+
+                <% } %>
+            </p>
+
+            <p class="mt-1">
+                Thank You, <br />
+                Team ABCD
+            </p>
+
+        </td>
+    </tr>
+</table>
+
+<%- include('./inc-footer.ejs') %>
